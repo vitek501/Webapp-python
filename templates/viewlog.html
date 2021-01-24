@@ -1,0 +1,25 @@
+
+<!-- saved from url=(0047)http://python.itcarlow.ie/ed2/ch06/viewlog.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<table>
+	<tr>
+        {% for row_title in the_row_titles %}
+            <th>{{row_title}}</th>
+        {% endfor %}
+    </th>
+    {% for log_row in the_data %}
+        <tr>
+            {% for item in log_row %}
+            	<td>{{item}}</td>    
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+</body><div></div><app-content ng-version="10.1.5"></app-content></html>
